@@ -73,7 +73,7 @@ int main(void)
 			break;
 		case 0:
 			ft_putnbr(n);
-			write(1, "&arr3", ft_length(arr3));
+			write(1, &arr3, ft_length(arr3));
 			break;
 		}
 	}
