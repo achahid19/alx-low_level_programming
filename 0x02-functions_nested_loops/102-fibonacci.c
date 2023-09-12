@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <unistd.h>
 
 /**
  * ft_fibonacci - return fibonacci value
@@ -17,10 +16,10 @@ int ft_fibonacci(int index)
 	{
 		printf("%lu", index1);
 		if (count <= index - 2)
-		{
+	{
 			index2 = index2 + index1;
 			index1 = index2 - index1;
-			puts(", ");
+			printf(", ");
 		}
 		count++;
 	}
@@ -35,6 +34,6 @@ int ft_fibonacci(int index)
  */
 int main(void)
 {
-	printf("%i", ft_fibonacci(50));
+	ft_fibonacci(50);
 	return (0);
 }
