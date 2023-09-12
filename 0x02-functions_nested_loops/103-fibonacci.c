@@ -45,7 +45,12 @@ int ft_sum_even_num(int *arr)
 	count = 0;
 	sum = 0;
 	while (arr[count] != 0)
-		sum += arr[count++];
+	{
+		if (arr[count] % 2 == 0)
+			sum += arr[count++];
+		else
+			count++;
+	}
 	return (sum);
 }
 
