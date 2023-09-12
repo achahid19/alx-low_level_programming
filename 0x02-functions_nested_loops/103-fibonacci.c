@@ -26,7 +26,6 @@ int *ft_fibonacci(int index)
 		}
 		count++;
 	}
-	putchar('\n');
 	return (arr);
 }
 
