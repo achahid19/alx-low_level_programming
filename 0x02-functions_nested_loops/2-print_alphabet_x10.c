@@ -17,8 +17,6 @@ void print_alphabet_x10(void)
 		while (alpha <= 'z')
 			_putchar(alpha++);
 		count++;
-		if (count == 10)
-			break;
 		_putchar('\n');
 	}
 }
