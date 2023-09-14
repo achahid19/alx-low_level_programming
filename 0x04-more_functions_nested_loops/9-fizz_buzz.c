@@ -18,6 +18,8 @@ int main(void)
 			printf("Buzz");
 		else if (num % 3 != 0)
 			printf("%i", num);
+		if (num == 100)
+			break;
 		printf(" ");
 		num++;
 	}
