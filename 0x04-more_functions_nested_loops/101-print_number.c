@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "main.h"
 
 /**
@@ -10,6 +11,11 @@ void print_number(int n)
 {
 	if (n < 0)
 	{
+		if (n == -2147483648)
+		{
+			write(1, "-2147483648", 11);
+			return;
+		}
 		_putchar('-');
 		n *= -1;
 	}
