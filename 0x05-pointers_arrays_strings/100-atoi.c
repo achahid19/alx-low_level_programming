@@ -12,7 +12,7 @@ int _atoi(char *s)
 	unsigned int num = 0;
 	int sign = 1;
 
-	while (s[count] < '0' || s[count] > '9')
+	while ((s[count] < '0' || s[count] > '9') && s[count])
 	{
 		if (s[count] == '-')
 			sign = -sign;
@@ -20,6 +20,7 @@ int _atoi(char *s)
 	}
 	while (s[count] >= '0' && s[count] <= '9')
 	{
+		printf("eere2");
 		num = (num * 10) + (s[count] - 48);
 		count++;
 	}
