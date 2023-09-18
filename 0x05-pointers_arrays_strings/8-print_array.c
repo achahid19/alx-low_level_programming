@@ -17,29 +17,9 @@ void print_array(int *a, int n)
 		printf("%d", *(a + count));
 		if (count == n - 1)
 			break;
-		else
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		putchar(',');
+		putchar(' ');
 		count++;
 	}
 	printf("\n");
-}
-/**
- * main - check the code for
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    int array[5];
-
-    array[0] = 98;
-    array[1] = 402;
-    array[2] = -198;
-    array[3] = 298;
-    array[4] = -1024;
-    print_array(array, 5);
-    return (0);
 }
