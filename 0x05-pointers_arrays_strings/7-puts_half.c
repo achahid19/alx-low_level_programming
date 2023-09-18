@@ -19,12 +19,3 @@ void puts_half(char *str)
 		_putchar(str[start++]);
 	_putchar('\n');
 }
-
-int main(void)
-{
-	char *str;
-
-	str = "123456789";
-	puts_half(str);
-	return (0);
-}
