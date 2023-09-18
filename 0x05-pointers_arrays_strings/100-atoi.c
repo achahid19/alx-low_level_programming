@@ -8,7 +8,8 @@
 
 int _atoi(char *s)
 {
-	int count, num = 0;
+	int count = 0;
+	unsigned int num = 0;
 	int sign = 1;
 
 	while (s[count] < '0' || s[count] > '9')
