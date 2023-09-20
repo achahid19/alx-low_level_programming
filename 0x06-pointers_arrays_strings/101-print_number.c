@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "main.h"
 
 /**
@@ -8,29 +9,24 @@
 
 void print_number(int n)
 {
-	unsigned int m, d, count;
-
 	if (n < 0)
 	{
-		_putchar(45);
-		m = n * -1;
+		if (n == -2147483648)
+		{
+			write(1, "-2147483648", 11);
+			return;
+		}
+		_putchar('-');
+		n *= -1;
 	}
-	else
+	if (n >= 0)
 	{
-		m = n;
-	}
-
-	d = m;
-	count = 1;
-
-	while (d > 9)
-	{
-		d /= 10;
-		count *= 10;
-	}
-
-	for (; count >= 1; count /= 10)
-	{
-		_putchar(((m / count) % 10) + 48);
+		if (n < 10)
+			_putchar(n + 48);
+		else if (n >= 10)
+		{
+			print_number(n / 10);
+			print_number(n % 10);
+		}
 	}
 }
