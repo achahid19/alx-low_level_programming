@@ -9,25 +9,21 @@
 char *cap_string(char *str)
 {
 	int count = 0;
-	char index = 1;
-	char c = ' ';
 
+	if (str[count] >= 'a' && str[count] <= 'z')
+		str[count] -= 32;
 	while (str[count])
 	{
-		c = str[count];
-		if (index == 1 && c >= 97 && c <= 122)
-		{
-			c -= 32;
-			index = 0;
-		}
-		else if (index == 0 && !(c >= 97 && c <= 122) && !(c >= 48 && c <= 57)
-		&& !(c >= 65 && c <= 90))
-		{
-			index = 1;
-		}
-		else
-			index = 0;
-		count++;
+	if (str[count] == ' ' || str[count] == '\t' || str[count] == '\n'
+	|| str[count] == ',' || str[count] == ';' || str[count] == '.'
+	|| str[count] == '!' || str[count] == '?' || str[count] == '\"'
+	|| str[count] == '(' || str[count] == ')' || str[count] == '{'
+	|| str[count] == '}')
+	{
+		if (str[count + 1] >= 'a' && str[count + 1] <= 'z')
+			str[count + 1] -= 'a' - 'A';
+	}
+	count++;
 	}
 	return (str);
 }
