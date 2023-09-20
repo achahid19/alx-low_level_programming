@@ -25,7 +25,7 @@ char *rot13(char *str)
 	count = 0;
 	while (str[count])
 	{
-	c = str[count];
+		c = str[count];
 		count1 = 0;
 		while (low_upper_alpha[count1])
 		{
