@@ -21,12 +21,13 @@ char *_strstr(char *haystack, char *needle)
 		if (haystack[count_haystack] == needle[0])
 		{
 			count_match = count_haystack;
-			while (needle[count_needle] &&
-				   haystack[count_haystack] == needle[count_needle])
+			while (needle[count_needle])
 			{
 				count_needle++;
 				count_haystack++;
-				if (needle[count_needle] == '\0' && haystack[count_haystack] == '\0')
+				if (haystack[count_haystack] != needle[count_needle])
+					break;
+				if (needle[count_needle] == '\0')
 					return (haystack + count_match);
 			}
 			count_haystack = count_match;
