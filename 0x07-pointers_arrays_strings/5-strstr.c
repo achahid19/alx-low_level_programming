@@ -30,7 +30,7 @@ char *_strstr(char *haystack, char *needle)
 					count_needle++;
 					count_haystack++;
 				}
-				else 
+				else
 					break;
 				if (needle[count_needle] == '\0')
 					return (haystack + count_match);
