@@ -4,6 +4,7 @@
  * _memcpy - copies n bytes from memory area src to dest
  * @src: source
  * @dest: destination
+ * @n: n bytes
  * Return: destination
 */
 
