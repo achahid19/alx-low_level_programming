@@ -2,6 +2,21 @@
 #include <stddef.h>
 
 /**
+  * _strlen - measure length of string
+  * @s: the string
+  *
+  * Return: length of the string
+  */
+int _strlen(char *s)
+{
+int len = 0;
+
+while (s[len])
+len++;
+return (len);
+}
+
+/**
  * _strstr - locates a substring
  * @haystack: string where to search needle
  * @needle: substring to search
@@ -11,33 +26,26 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int count_haystack = 0;
-	int count_needle;
-	int count_match = 0;
+	int needle_len = 0;
+	int matches = 0;
 
-	if (needle[0] == '\0' || haystack[0] == '\0')
-		return (NULL);
-	while (haystack[count_haystack])
+	needle_len = _strlen(needle);
+	while (*haystack && *needle)
 	{
-		count_needle = 0;
-		if (haystack[count_haystack] == needle[0])
+		if (*haystack != *needle)
 		{
-			count_match = count_haystack;
-			while (needle[count_needle])
-			{
-				if (haystack[count_haystack] == needle[count_needle])
-				{
-					count_needle++;
-					count_haystack++;
-				}
-				else
-					break;
-				if (needle[count_needle] == '\0')
-					return (haystack + count_match);
-			}
-			count_haystack = count_match;
+			needle -= matches;
+			haystack -= (matches - 1);
+			matches = 0;
+			continue;
 		}
-		count_haystack++;
+		haystack++;
+		needle++;
+		matches++;
+		if (matches == needle_len)
+			break;
 	}
+	if (matches == needle_len)
+		return (haystack - matches);
 	return (NULL);
 }
