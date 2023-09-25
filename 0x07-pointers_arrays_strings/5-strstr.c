@@ -15,7 +15,7 @@ char *_strstr(char *haystack, char *needle)
 	int count_needle;
 	int count_match = 0;
 
-	if (needle[0] == '\0')
+	if (needle[0] == '\0' || haystack[0] == '\0')
 		return (NULL);
 	while (haystack[count_haystack])
 	{
@@ -30,7 +30,7 @@ char *_strstr(char *haystack, char *needle)
 					count_needle++;
 					count_haystack++;
 				}
-				else
+				else 
 					break;
 				if (needle[count_needle] == '\0')
 					return (haystack + count_match);
