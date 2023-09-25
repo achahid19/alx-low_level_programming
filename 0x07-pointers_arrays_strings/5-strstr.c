@@ -25,8 +25,6 @@ char *_strstr(char *haystack, char *needle)
 			{
 				count_needle++;
 				count_haystack++;
-				if (haystack[count_haystack] != needle[count_needle])
-					break;
 				if (needle[count_needle] == '\0')
 					return (haystack + count_match);
 			}
