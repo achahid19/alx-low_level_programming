@@ -12,6 +12,8 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int count_str = 0;
 	unsigned int count_sub_str;
 
+	if (accept[0] == '\0')
+		return (count_str);
 	while (s[count_str])
 	{
 		count_sub_str = 0;
