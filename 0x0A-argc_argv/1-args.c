@@ -11,6 +11,7 @@
 int main(int ac, char **av)
 {
 	(void)av;
+	ac--;
 	_putchar(ac + 48);
 	_putchar('\n');
 	return (EXIT_SUCCESS);
