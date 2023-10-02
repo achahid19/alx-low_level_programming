@@ -23,7 +23,7 @@ int _isdigit(char *str)
  * @num: number to print
  * Return: void
  */
-void _putnbr(unsigned int num)
+void _putnbr(unsigned long int num)
 {
 	if (num < 10)
 		_putchar(num + 48);
@@ -43,7 +43,7 @@ void _putnbr(unsigned int num)
 int main(int ac, char *av[])
 {
 	int count;
-	unsigned int sum = 0;
+	unsigned long int sum = 0;
 
 	if (ac > 1)
 	{
