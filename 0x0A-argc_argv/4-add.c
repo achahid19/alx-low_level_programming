@@ -9,9 +9,9 @@
  */
 int _isdigit(char *str)
 {
-	/* base case */
 	if (str[0] == '\0')
 		return (0);
+	/* base case */
 	if (*str == '\0')
 		return (1);
 	else if (!(*str >= '0' && *str <= '9'))
