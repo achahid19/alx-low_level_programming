@@ -23,22 +23,14 @@ int _isdigit(char *str)
  * @num: number to print
  * Return: void
  */
-void _putnbr(long int num)
+void _putnbr(unsigned int num)
 {
-	if (num < 0)
+	if (num < 10)
+		_putchar(num + 48);
+	else if (num >= 10)
 	{
-		_putchar('-');
-		num = -num;
-	}
-	if (num >= 0)
-	{
-		if (num < 10)
-			_putchar(num + 48);
-		else if (num >= 10)
-		{
-			_putnbr(num / 10);
-			_putnbr(num % 10);
-		}
+		_putnbr(num / 10);
+		_putnbr(num % 10);
 	}
 }
 
@@ -51,7 +43,7 @@ void _putnbr(long int num)
 int main(int ac, char *av[])
 {
 	int count;
-	long int sum = 0;
+	unsigned int sum = 0;
 
 	if (ac > 1)
 	{
