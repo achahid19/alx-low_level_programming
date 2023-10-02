@@ -9,16 +9,12 @@
  */
 int _isdigit(char *str)
 {
-	int count;
-
-	for (count = 0; str[count]; count++)
-	{
-		if (str[count] >= '0' && str[count] <= '9')
-			continue;
-		else
-			return (0);
-	}
-	return (1);
+	/* base case */
+	if (*str == '\0')
+		return (1);
+	if (!(*str >= '0' && *str <= '9'))
+		return (0);
+	_isdigit(str + 1);	
 }
 
 /**
