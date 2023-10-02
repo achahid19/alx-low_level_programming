@@ -19,7 +19,7 @@ int main(int ac, char **av)
 	{
 		if (atoi(av[1]) < 0)
 			write(1, "0\n", 2);
-		else
+		else if (atoi(av[1]) >= 0)
 		{
 			cents = atoi(av[1]);
 			while (count < 5)
