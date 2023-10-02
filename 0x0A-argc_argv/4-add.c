@@ -14,7 +14,7 @@ int _isdigit(char *str)
 		return (1);
 	if (!(*str >= '0' && *str <= '9'))
 		return (0);
-	_isdigit(str + 1);	
+	_isdigit(str + 1);
 }
 
 /**
