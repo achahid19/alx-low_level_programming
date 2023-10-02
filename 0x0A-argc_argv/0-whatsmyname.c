@@ -11,7 +11,7 @@
 int main(int ac, char *av[])
 {
 	int count = 0;
-	
+
 	if (ac == 1)
 	{
 		for (count = 0; av[0][count]; count++)
