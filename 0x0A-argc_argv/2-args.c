@@ -16,8 +16,6 @@ int main(int ac, char *av[])
 	{
 		for (count_column = 0; av[count_row][count_column]; count_column++)
 			_putchar(av[count_row][count_column]);
-		if (count_row == ac - 1)
-			break;
 		_putchar('\n');
 	}
 	return (EXIT_SUCCESS);
