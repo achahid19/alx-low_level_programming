@@ -32,6 +32,7 @@ int main(int ac, char **av)
 				else
 					count++;
 			}
+			printf("%d", index);
 		}
 	}
 	else
@@ -39,6 +40,5 @@ int main(int ac, char **av)
 		write(1, "Error\n", 6);
 		return (1);
 	}
-	printf("%d", index);
 	return (EXIT_SUCCESS);
 }
