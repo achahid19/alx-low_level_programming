@@ -2,7 +2,7 @@
 #define MAIN_H
 
 void _putchar(char c);
-void _putnbr(unsigned long int num);
+void _putnbr(long int num);
 int _isdigit(char *str);
 
 #endif /* MAIN_H */
