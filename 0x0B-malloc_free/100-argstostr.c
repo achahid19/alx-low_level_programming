@@ -36,7 +36,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	len = ft_strslen(av, ac);
-	str = malloc(sizeof(char) * len + 1 + (ac - 1));
+	str = malloc(sizeof(char) * len + 1 + ac);
 	if (str == NULL)
 		return (NULL);
 	for (count = 0; count < ac; count++)
@@ -48,6 +48,7 @@ char *argstostr(int ac, char **av)
 			str[str_count] = av[count][count1];
 		}
 	}
-	str[str_count] = '\0';
+	str[str_count] = '\n';
+	str[str_count++] = '\0';
 	return (str);
 }
