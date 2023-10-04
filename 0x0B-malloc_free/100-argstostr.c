@@ -43,12 +43,33 @@ char *argstostr(int ac, char **av)
 	{
 		if (!(str_count == 0))
 			str[str_count++] = '\n';
-		for (count1 = 0; av[count][count1]; count1++, str_count++)
+		for (count1 = 0; av[count][count1]; count1++)
 		{
-			str[str_count] = av[count][count1];
+			str[str_count++] = av[count][count1];
 		}
 	}
-	str[str_count] = '\n';
-	str[str_count++] = '\0';
+	str[str_count++] = '\n';
+	str[str_count] = '\0';
 	return (str);
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - check the code for ALX School students.
+ *
+ * Return: Always 0.
+ */
+int main(int ac, char *av[])
+{
+    char *s;
+
+    s = argstostr(ac, av);
+    if (s == NULL)
+    {
+        return (1);
+    }
+    printf("%s", s);
+    free(s);
+    return (0);
 }
