@@ -42,17 +42,3 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	str[count + count1] = '\0';
 	return (str);
 }
-
-#include <stdio.h>
-int main(int ac, char **av)
-{
-	char *str;
-
-	if (ac == 3)
-	{
-		str = string_nconcat(av[1], av[2], 4);
-	}
-	printf("%s", str);
-	free (str);
-	return (0);
-}
