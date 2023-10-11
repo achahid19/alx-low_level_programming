@@ -13,20 +13,20 @@ int main(int ac, char **av)
 
 	if (ac != 4)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(98);
 	}
 	func = get_op_func(av[2]);
 	if (func == NULL)
 	{
-		printf("Error of nULL");
+		printf("Error\n");
 		exit(99);
 	}
 	num1 = atoi(av[1]);
 	num2 = atoi(av[3]);
 	if (num2 == 0 && (*av[2] == '/' || *av[2] == '%'))
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(100);
 	}
 	result = func(num1, num2);
