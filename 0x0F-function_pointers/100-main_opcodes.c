@@ -36,7 +36,7 @@ int main(int ac, char **av)
 	else
 	{
 		printf("Error\n");
-		exit(2);
+		exit(1);
 	}
 	return (0);
 }
