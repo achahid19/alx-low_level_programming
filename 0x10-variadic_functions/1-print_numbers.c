@@ -23,9 +23,3 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_end(nums); /* clean up */
 	printf("\n");
 }
-
-int main(void)
-{
-	print_numbers(", ", 3, 5, 4, 10);
-	return (0);
-}
