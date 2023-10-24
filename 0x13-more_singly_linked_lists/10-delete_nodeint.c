@@ -44,13 +44,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		free(temp);
 		return (1);
 	}
-	for (count = 0; count <= index - 1; count++)
+	for (count = 0; count <= index - 1 && temp->next; count++)
 	{
 		if ((*head)->next)
 		{
 			*head = (*head)->next;
-			if (*head == NULL)
-				return (-1);
 		}
 		else
 			return (-1);
