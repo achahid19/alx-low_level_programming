@@ -48,7 +48,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		new_node = add_nodeint(&(*head), n);
 		return (new_node);
 	}
-	for (count = 0; count < idx - 1; count++)
+	for (count = 0; count <= idx - 1; count++)
 	{
 		if ((*head) && (*head)->next != NULL)
 		{
