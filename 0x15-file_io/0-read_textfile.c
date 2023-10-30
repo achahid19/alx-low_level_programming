@@ -15,10 +15,10 @@
 
 	if (filename == NULL)
 		return (0);
-	pf = malloc(sizeof(*filename) * letters + 1) /* 1 for null byte */
-	if (pf = NULL)
+	pf = malloc(sizeof(*filename) * letters + 1); /* 1 for null byte */
+	if (pf == NULL)
 		return (0);
-	fo = open(filename, 0_RDONLY);
+	fo = open(filename, O_RDONLY);
 	if (fo == -1)
 	{
 		free(pf);
